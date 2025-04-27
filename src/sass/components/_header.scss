@@ -1,0 +1,148 @@
+// - mobile  >320px   (320-480 responive)
+// - tablet  >768px
+// - desktop >1200
+.header {
+  position: relative;
+  padding: 40px 347px 0px;
+  width: 100%;
+  background-image: url(../images/header.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    padding: 78px 25px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    padding: 40px 99px; //bottom?
+  }
+  &_darker {
+    top: 0;
+    // left: 0;
+    // position: absolute;
+    // width: 100vw;
+    // background-color: rgba(11, 11, 11, 0.5);
+    // background: rgba(11, 11, 11, 0.5);
+  }
+  &-logo {
+    &_blur {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 243px;
+      height: 201px;
+      backdrop-filter: blur(30px);
+      background: linear-gradient(
+        136.05deg,
+        rgba(196, 196, 196, 0.1) 7.362%,
+        rgba(196, 196, 196, 0) 89.206%
+      );
+      border-radius: 0% 0% 100%;
+      @media screen and (min-width: 320px) and (max-width: 768px) {
+        width: 106px;
+        height: 90px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 1200px) {
+        width: 179px;
+        height: 151px;
+      }
+    }
+    &_svg {
+      position: absolute;
+      left: 40px;
+      top: 38px;
+      width: 136px;
+      height: 70px;
+      fill: rgb(255, 255, 255);
+      @media screen and (min-width: 320px) and (max-width: 768px) {
+        width: 60px;
+        height: 31px;
+        left: 23px;
+        top: 23px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 1200px) {
+        width: 100px;
+        height: 53px;
+        left: 39px;
+        top: 29px;
+      }
+    }
+  }
+  &_h1 {
+    margin-bottom: 52px;
+    color: rgb(220, 86, 197);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 61px;
+    text-align: center;
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      margin-bottom: 25px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      margin-bottom: 27px;
+      font-size: 30px;
+      line-height: 37px;
+    }
+  }
+  &-pos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+    &_label {
+      position: relative;
+    }
+    &_input {
+      padding: 10px 14px 10px 30px;
+      color: rgb(147, 147, 147);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      outline: none;
+      border: none;
+      border-radius: 20px;
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+    &_svgSearch {
+      bottom: 14px;
+      right: 26px;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      fill: rgb(147, 147, 147);
+    }
+    &_svgList {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      width: 15px;
+      height: 10px;
+      fill: rgb(147, 147, 147);
+    }
+  }
+}
+
+// .toast {
+//   display: flex;
+//   width: 300px;
+//   height: auto;
+//   padding: 16px 24px;
+//   gap: 40px;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+//   font-family: 'Montserrat', sans-serif;
+//   font-size: 16px;
+//   font-weight: bold;
+//   border-radius: 12px;
+//   background: linear-gradient(45deg, #ff416c, #ff4b2b);
+//   color: #fff;
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+// }
