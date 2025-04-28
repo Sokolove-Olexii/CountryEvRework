@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const API_KEY = 'brfdbddKGRzc2X8LiBGbED6sZHFCGpLR';
+  const API_KEY = 'w3FH1BQO5lCqAh3eiT9RxTwR4I3QrFdE';
   const modal = document.getElementById('eventModal');
   const modalContent = modal.querySelector('.modal-content');
   const closeModal = modal.querySelector('.modal-close');

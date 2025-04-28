@@ -1,7 +1,7 @@
 import debounce from 'debounce';
 import { renderCards } from './cards';
 import Toastify from 'toastify-js';
-export const API_KEY = 'brfdbddKGRzc2X8LiBGbED6sZHFCGpLR';
+export const API_KEY = 'w3FH1BQO5lCqAh3eiT9RxTwR4I3QrFdE';
 
 const eventInput = document.getElementById('eventInp');
 const searchButton = document.querySelector('.header-pos_svgSearch');

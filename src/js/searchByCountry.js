@@ -3,7 +3,7 @@ import Toastify from 'toastify-js';
 import 'toastify-js/src/toastify.css';
 import countryMap from './countries.json';
 import { renderCards } from './cards';
-export const API_KEY = 'brfdbddKGRzc2X8LiBGbED6sZHFCGpLR';
+export const API_KEY = 'w3FH1BQO5lCqAh3eiT9RxTwR4I3QrFdE';
 
 const countryInput = document.getElementById('countryInp');
 const listButton = document.querySelector('.header-pos_svgList');

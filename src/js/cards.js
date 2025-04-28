@@ -15,6 +15,4 @@ export function renderCards(e) {
     })
     .join('');
   ul.innerHTML = markup;
-  //   console.log(e);
-  //   return card;
 }
