@@ -13,6 +13,33 @@
 // .card-body {
 //   hyphens: auto;
 // }
+html,
+body,
+.mainsec {
+  height: 100%;
+  margin: 0;
+}
+
+.lay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/lay.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+}
+
+.back {
+  background-image: url('../images/noiseBody.png');
+  background-color: #0e0e0e;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  padding: 0 173px;
+}
 
 .card-text {
   color: rgb(255, 255, 255);
@@ -52,16 +79,6 @@
 //   height: 227px;
 //   border-radius: 50px 0px 50px 0px;
 // }
-
-.back {
-  padding: 0px 173px;
-  width: 100%;
-  background-image: url(../images/noiseBody.png);
-  background-color: #0e0e0e;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 .events {
   display: grid;
