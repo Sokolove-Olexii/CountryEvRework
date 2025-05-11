@@ -1,12 +1,49 @@
+import { renderCards } from './cards';
+import { API_KEY } from './searchByCountry';
+import { createToast } from './searchByName';
+// import geohash from 'ngeohash';
+
+const firstLoadMass = [
+  'imagine',
+  'metallica',
+  'harry',
+  'new york',
+  'musa',
+  'nba',
+  'es',
+];
+
+const firstLoadRandMass =
+  firstLoadMass[Math.floor(Math.random() * firstLoadMass.length)];
+
+document.addEventListener('DOMContentLoaded', async e => {
+  await firstload(e);
+});
+
+async function firstload(e) {
+  const responseLoading = await fetch(
+    `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=${API_KEY}&keyword=${firstLoadRandMass}`
+  );
+  const data = await responseLoading.json();
+  console.log(data);
+
+  if (data._embedded && data._embedded.events) {
+    const event = data._embedded.events;
+    renderCards(event);
+  } else {
+    createToast('Помилка завантаження');
+  }
+}
+
 // import { renderCards } from './cards';
 // import { API_KEY } from './searchByCountry';
 // import geohash from 'ngeohash';
 
 // // const language = navigator.language || navigator.userAgent;
 
-document.addEventListener('DOMContentLoaded', e => {
-  firstload(e);
-});
+// document.addEventListener('DOMContentLoaded', e => {
+//   firstload(e);
+// });
 // // fetchIventsGeo(getLocation());
 // // RenderGeolocation();
 
@@ -57,10 +94,6 @@ document.addEventListener('DOMContentLoaded', e => {
 //   });
 // }
 
-import { renderCards } from './cards';
-import { API_KEY } from './searchByCountry';
-import geohash from 'ngeohash';
-
 // async function locate(e) {
 //   if (navigator.geolocation) {
 //     navigator.geolocation.getCurrentPosition(
@@ -87,14 +120,14 @@ import geohash from 'ngeohash';
 // }
 // locate();
 
-async function firstload(e) {
-  const responseLoading = await fetch(
-    `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=${API_KEY}`
-  );
-  const data = await responseLoading.json();
-  console.log(data);
-  const event = data._embedded.events;
-  renderCards(event);
-}
+// async function firstload(e) {
+//   const responseLoading = await fetch(
+//     `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=${API_KEY}`
+//   );
+//   const data = await responseLoading.json();
+//   console.log(data);
+//   const event = data._embedded.events;
+//   renderCards(event);
+// }
 
-firstload();
+// firstload();
