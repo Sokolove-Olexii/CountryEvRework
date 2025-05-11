@@ -1,6 +1,6 @@
 import { renderCards } from './cards';
 import { API_KEY } from './searchByCountry';
-import { createToast } from './searchByName';
+// import { createToast } from './searchByName';
 // import geohash from 'ngeohash';
 
 const firstLoadMass = [
@@ -31,7 +31,8 @@ async function firstload(e) {
     const event = data._embedded.events;
     renderCards(event);
   } else {
-    createToast('Помилка завантаження');
+    // createToast('Помилка завантаження');
+    console.log('warning');
   }
 }
 
