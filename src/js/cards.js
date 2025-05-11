@@ -10,9 +10,9 @@ export function renderCards(e) {
          <div class="card-img-container" style="background-image: url('${item.images[0].url}')"></div>
          <div class="pink"></div>
           <div class="card-body">
-            <h2 class="card-title">${item.name}</h2>
+            <h2 class="card-Title">${item.name}</h2>
             <p class="card-text">${item.dates.start.localDate}</p>
-            <p class="card-text2">${item._embedded.venues[0].name}</p>
+            <p class="card-text3">${item._embedded.venues[0].name}</p>
           </div>
         </li>
         `;
